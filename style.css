@@ -71,7 +71,6 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
-  z-index: ;
 }
 
 .nav-links li {
@@ -105,7 +104,6 @@ nav {
         }
     } */
 
-<<<<<<< HEAD
 @media screen and (max-width: 1200px) {
   body {
     overflow-x: hidden;
@@ -201,122 +199,3 @@ nav {
   text-align: center;
   font-size: 18px;
 }
-=======
-    @media screen and (max-width:1200px) {
-        body{
-            overflow-x:hidden;
-        }
-        .nav-links{
-            position:absolute;
-            right:0px;
-            height:92vh;
-            top:8vh;
-            /* background-color:red; */
-            flex-direction: column;
-            align-items: center;
-            width:25%;
-            transform:translateX(100%);
-            transition: transform 0.5s ease-in;
-        }
-
-        .nav-links li{
-            opacity:0;
-        }
-
-        .burger{
-            display:block;
-        }
-    }
-
-    .nav-active{
-        transform:translateX(0%);
-    }
-
-    @keyframes navLinkFade {
-        from{
-            opacity: 0;
-            transform: transformX(50px);
-        }
-        to{
-            opacity: 1;
-            transform: transformX(0px);
-        }
-    }
-
-    .toggle .line1{
-        transform: translate(0px, 13px) rotate(90deg) ;
-        /* transform: rotate(-45deg) translate(-5px, 6px); */
-    }
-
-    .toggle .line2{
-        transform: rotate(90deg);
-        /* opacity:0; */
-    }    
-    
-    .togglex2 {
-        opacity:0;
-    }
-    .toggle .line3{
-        /* transform: translate(-8px, -8px) rotate(90deg); */
-
-    }
-    .char {
-        color: white;
-        font-weight: bold;
-    }
-
-    .deathstar {
-        max-width:30%;
-        height:auto;
-        padding-bottom: 80px;
-    }
-
-    .search {
-        color: black;
-    }
-
-    .button-search {
-        padding-top: 50px;
-        padding-left: 400px;
-        padding-right: 400px;
-        color: white;
-        text-align: center;
-    }
-
-    .heading {
-        padding-top: 20px;
-        color: #FFE81F;
-        text-align: center;
-        font-size: 18px;
-    }
-
-    /* .suggestions {
-        margin: 0;
-        padding: 0;
-        position: relative;
-      }
-
-      .suggestions li {
-        background: white;
-        list-style: none;
-        border-bottom: 1px solid #D8D8D8;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-        margin: 0;
-        padding: 20px;
-        transition: background 0.2s;
-        display: flex;
-        justify-content: space-between;
-        text-transform: capitalize;
-      }
-
-      .suggestions li:nth-child(even) {
-        transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
-        background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
-      }
-      
-      .suggestions li:nth-child(odd) {
-        transform: perspective(100px) rotateX(-3deg) translateY(3px);
-        background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
-      }
-       */
->>>>>>> ecc5400... first attempt at name filtering
