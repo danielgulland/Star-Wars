@@ -2,6 +2,18 @@
         background-image: url(https://wallpapercave.com/wp/gfwPusm.jpg);
     }
 
+    .nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .list a {
+        color: white;
+        font-size: 15px;
+    }
+
     .char {
         color: white;
         font-weight: bold;
@@ -26,6 +38,7 @@
     }
 
     .heading {
+        padding-top: 20px;
         color: #FFE81F;
         text-align: center;
         font-size: 18px;

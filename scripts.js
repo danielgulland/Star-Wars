@@ -34,7 +34,7 @@ async function foo(index) {
     console.log(characters);
 }
 
-
+const result = form.addEventListener('submit', foo(5));
 
 // Less efficient way..because we're hard coding the number of pages
 
@@ -52,6 +52,3 @@ async function foo(index) {
 
 //     console.log(characters)
 // }
-
-
-const result = form.addEventListener('submit', foo(5));
