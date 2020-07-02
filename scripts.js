@@ -30,11 +30,11 @@ async function getAllRequests(url) {
 
 async function foo(index) {
     let url = 'https://swapi.dev/api/people/?page=1';
-    getAllRequests(url);
+    await getAllRequests(url);
     console.log(characters);
 }
 
-const result = form.addEventListener('submit', foo(5));
+// const result = form.addEventListener('submit', foo(5));
 
 // Less efficient way..because we're hard coding the number of pages
 
@@ -52,3 +52,29 @@ const result = form.addEventListener('submit', foo(5));
 
 //     console.log(characters)
 // }
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        navLinks.forEach((link, index) => {
+        
+            if(link.style.animation) {
+                link.style.animation = '';
+            }
+            else {
+                link.style.animation = `navLinkFade 0.1s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+        burger.classList.toggle('toggle');
+    });
+
+}
+
+const app = ()=> {
+    navSlide();
+}
+
+app();
