@@ -30,6 +30,7 @@ async function getAllCharacters(url) {
   }
 }
 
+<<<<<<< HEAD
 async function foo() {
   let url = "https://swapi.dev/api/people/?page=1";
   await getAllCharacters(url);
@@ -92,6 +93,15 @@ function displayMatches() {
   console.log(html);
   suggestions.innerHTML = html;
 }
+=======
+async function foo(index) {
+    let url = 'https://swapi.dev/api/people/?page=1';
+    await getAllRequests(url);
+    console.log(characters);
+}
+
+// const result = form.addEventListener('submit', foo(5));
+>>>>>>> cfa6dd4... navbar stoof
 
 const app = () => {
   navSlide();
@@ -102,4 +112,35 @@ suggestions.html = "<h1>hey</h1>";
 text.addEventListener("change", displayMatches);
 text.addEventListener("keyup", displayMatches);
 
+<<<<<<< HEAD
 app();
+=======
+//     console.log(characters)
+// }
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        navLinks.forEach((link, index) => {
+        
+            if(link.style.animation) {
+                link.style.animation = '';
+            }
+            else {
+                link.style.animation = `navLinkFade 0.1s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+        burger.classList.toggle('toggle');
+    });
+
+}
+
+const app = ()=> {
+    navSlide();
+}
+
+app();
+>>>>>>> cfa6dd4... navbar stoof
