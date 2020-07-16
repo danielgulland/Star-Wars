@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
 
     <title>Star Wars API</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <p>Nav Bar</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">News</a>
+          <ul>
+            <li><a href="">Fox News</a></li>
+            <li><a href="">Space News</a></li>
+            <li><a href="">Your Mom's News</a></li>
+          </ul>
+        </li>
 
-</head>
-<body>
-    <div class="topNav">
-        <ul class="nav">
-            <li class="list"><a href="default.asp">Home</a></li>
-            <li class="list"><a href="news.asp">News</a></li>
-            <li class="list"><a href="contact.asp">Contact</a></li>
-            <li class="list"><a href="about.asp">About</a></li>
-          </ul>    
-    </div>
-   
-    </div>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
     <div class="heading">
-        <h1 class="animate__animated animate__lightSpeedInLeft">THE STAR WARS <span class="char">CHARACTER</span> DATABASE</h1>
-        <br>
-        <p class="para animate__animated animate__lightSpeedInLeft">Welcome to the Star Wars character database! where you can search for
-            all of your favorite Star Wars characters.</p>
-        <p class="para animate__animated animate__lightSpeedInLeft">Use the input below to search.</p>
+      <h1 class="animate__animated animate__lightSpeedInLeft">
+        THE STAR WARS <span class="char">CHARACTER</span> DATABASE
+      </h1>
+      <br />
+      <p class="para animate__animated animate__lightSpeedInLeft">
+        Welcome to the Star Wars character database! where you can search for
+        all of your favorite Star Wars characters.
+      </p>
+      <p class="para animate__animated animate__lightSpeedInLeft">
+        Use the input below to search.
+      </p>
     </div>
-    
+
     <div class="button-search">
-        <img class="deathstar para animate__animated animate__backInLeft" src="death-star-png-1-transparent.png" alt="Italian Trulli">
-        <div>
-            <form class="search-form">
-                <label for="char-search">Search here:</label>
-                <input type="text" class="form-control" id="email">
-            </form>
-        </div>
+      <img
+        class="deathstar para animate__animated animate__backInLeft"
+        src="death-star-png-1-transparent.png"
+        alt="Italian Trulli"
+      />
+      <div>
+        <form class="search-form">
+          <label for="char-search">Search here:</label>
+          <input type="text" class="form-control" id="email" />
+        </form>
+      </div>
     </div>
 
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>

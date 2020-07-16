@@ -1,45 +1,96 @@
-    body {
-        background-image: url(https://wallpapercave.com/wp/gfwPusm.jpg);
-    }
+body {
+  background-image: url(https://wallpapercave.com/wp/gfwPusm.jpg);
+}
 
-    .nav {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
+nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  float: left;
+}
 
-    .list a {
-        color: white;
-        font-size: 15px;
-    }
+nav p {
+  font-family: arial;
+  color: #ffe81f;
+  font-size: 24px;
+  line-height: 55px;
+  float: left;
+  padding: 0px 20px;
+}
 
-    .char {
-        color: white;
-        font-weight: bold;
-    }
+nav ul {
+  float: left;
+}
 
-    .deathstar {
-        max-width:30%;
-        height:auto;
-        padding-bottom: 80px;
-    }
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
 
-    .search {
-        color: black;
-    }
+nav ul li a {
+  display: block;
+  font-family: arial;
+  color: #ffe81f;
+  font-size: 14px;
+  padding: 22px 14px;
+  text-decoration: none;
+}
 
-    .button-search {
-        padding-top: 50px;
-        padding-left: 400px;
-        padding-right: 400px;
-        color: white;
-        text-align: center;
-    }
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 0px 0px 4px 4px;
+}
 
-    .heading {
-        padding-top: 20px;
-        color: #FFE81F;
-        text-align: center;
-        font-size: 18px;
-    }
+nav ul li ul li {
+  width: 180px;
+  border-radius: 4px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f3f3f3;
+}
+
+.list a {
+  color: white;
+  font-size: 15px;
+}
+
+.char {
+  color: white;
+  font-weight: bold;
+}
+
+.deathstar {
+  max-width: 30%;
+  height: auto;
+  padding-bottom: 80px;
+}
+
+.search {
+  color: black;
+}
+
+.button-search {
+  padding-top: 50px;
+  padding-left: 400px;
+  padding-right: 400px;
+  color: white;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 60px;
+  color: #ffe81f;
+  text-align: center;
+  font-size: 18px;
+}
