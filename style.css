@@ -1,9 +1,7 @@
-     body {
+    body {
         background-image: url(https://wallpapercave.com/wp/gfwPusm.jpg);
-        /* background:orange; */
     }
-
-    *{
+     *{
         margin: 0px;
         padding: 0px;
         box-sizing:border-box;
@@ -17,11 +15,50 @@
         justify-content: space-around;
         align-items: center;
         min-height: 8vh;
-        font-family: 'Montserrat', sans-serif;
-        background-color: green;
+        font-family: sans-serif;
         border-bottom-style: solid;
         border-bottom-color:white;
     } 
+
+    .dropdown-button {
+        background-color: transparent;
+        color: rgb(226,226,226);
+        font-size:18px;
+        letter-spacing: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .nav-links ul li a {
+        color: black;
+        padding: 25px;
+        font-family: 'Quattrocento', serif;
+        display: block;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        position: absolute;
+        right: 20%;
+        z-index: 1;
+        background-color: #f9f9f9;
+        display: none;
+    }
+
+    .dropdown-button:hover + .drop-down{
+        display: block;
+    }
+
+    .nav-links ul:hover {
+        display: block;
+    }
+
+    .nav-links ul li a:hover {
+        background-color: #000;
+        color: #fff;
+    }
 
     .logo{
         color: rgb(226,226,226);
@@ -34,6 +71,7 @@
         display:flex;
         justify-content:space-around;
         width:30%;
+        z-index:
     }
 
     .nav-links li{
@@ -62,7 +100,6 @@
     /* @media screen and (max-width:1024px) {
         .nav-links{
             display:flex;
-            background-color:red;
             justify-content:space-around;
             width:60%;
         }
@@ -77,12 +114,12 @@
             right:0px;
             height:92vh;
             top:8vh;
-            /* background-color:red; */
             flex-direction: column;
             align-items: center;
             width:25%;
             transform:translateX(100%);
             transition: transform 0.5s ease-in;
+            z-index: 4;
         }
 
         .nav-links li{
@@ -91,6 +128,15 @@
 
         .burger{
             display:block;
+        }
+
+        .nav-links ul {
+            position: absolute;
+            right: 180px;
+            top: 470px;
+            z-index: 2;
+            background-color: #f9f9f9;
+            display: none;
         }
     }
 
@@ -123,7 +169,8 @@
         transform: rotate(45deg) translate(-5px, -6px);
 
     }
-    /* .char {
+
+    .char {
         color: white;
         font-weight: bold;
     }
@@ -151,4 +198,4 @@
         color: #FFE81F;
         text-align: center;
         font-size: 18px;
-    }*/
+    }

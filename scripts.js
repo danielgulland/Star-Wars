@@ -1,6 +1,9 @@
+const nav = document.querySelector('nav')
 const form = document.querySelector('.search-form');
 const text = document.querySelector('.form-control');
+const navLinks = document.querySelector('.nav-links');
 const characters = [];
+let films = [];
 let allData = [];
 let dataItems;
 let count = 2;
@@ -12,15 +15,14 @@ let callAgain = true;
 const requests = [];
 var url;
 
-
-async function getAllRequests(url) {
+async function getAllCharacters(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
         url = data.next;
         characters.push(...data.results);
         if(url !== null) {
-            return getAllRequests(url);
+            return getAllCharacters(url);
         }
     }
     catch(err) {
@@ -28,32 +30,29 @@ async function getAllRequests(url) {
     }
 }
 
-async function foo(index) {
+async function foo() {
     let url = 'https://swapi.dev/api/people/?page=1';
-    await getAllRequests(url);
+    await getAllCharacters(url);
     console.log(characters);
 }
 
-// const result = form.addEventListener('submit', foo(5));
+async function getAllFilms() {
+    try {
+        const response = await fetch('https://swapi.dev/api/films/')
+        const data = await response.json();
+        films.push(...data.results);
+        console.log(films);
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
 
-// Less efficient way..because we're hard coding the number of pages
+ const result = form.addEventListener('submit', foo());
+ const links = navLinks.addEventListener('click', getAllFilms);
+ console.log(nav);
 
-// function getAllRequests(url) {
-//     for(let i = 1; i < 10; i++) {
-//         requests.push(fetch('https://swapi.dev/api/people/?page=' + i));
-//     }
-//     return requests;   
-// }
-
-// async function foo(index) {
-//     const responses = await Promise.all(getAllRequests());
-//     const data = await Promise.all(responses.map(res => res.json()));
-//     data.forEach(object => characters.push(...object.results));
-
-//     console.log(characters)
-// }
-
-const navSlide = () => {
+ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
