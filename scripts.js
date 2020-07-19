@@ -1,5 +1,6 @@
 const form = document.querySelector('.search-form');
 const text = document.querySelector('.form-control');
+const suggestions = document.querySelector('.suggestions');
 const characters = [];
 let allData = [];
 let dataItems;
@@ -34,7 +35,7 @@ async function foo(index) {
     console.log(characters);
 }
 
-// const result = form.addEventListener('submit', foo(5));
+const result = form.addEventListener('submit', foo(5));
 
 // Less efficient way..because we're hard coding the number of pages
 
@@ -73,8 +74,35 @@ const navSlide = () => {
 
 }
 
+function findMatches(value) {
+    console.log(value);
+    return characters.filter(character => {
+        const regex = new RegExp(value, 'gi');
+        return character.name.match(regex);
+    })
+}
+
+function displayMatches() {
+    const matches = findMatches(this.value);
+    const html = matches.map(match => {
+        console.log(match.name);
+        return `
+        <li>
+        <span class="name">${match.name}</span>
+      </li>`
+    })
+    .join('');
+    console.log(html);
+    suggestions.innerHTML = html;
+}
+
 const app = ()=> {
     navSlide();
 }
+
+suggestions.html = '<h1>hey</h1>'
+
+    text.addEventListener('change', displayMatches);
+    text.addEventListener('keyup', displayMatches);
 
 app();
