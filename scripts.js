@@ -1,6 +1,7 @@
 const form = document.querySelector('.search-form');
 const text = document.querySelector('.form-control');
 const suggestions = document.querySelector('.suggestions');
+
 const characters = [];
 let allData = [];
 let dataItems;
@@ -36,6 +37,7 @@ async function foo(index) {
 }
 
 const result = form.addEventListener('submit', foo(5));
+
 
 // Less efficient way..because we're hard coding the number of pages
 
@@ -104,5 +106,6 @@ suggestions.html = '<h1>hey</h1>'
 
     text.addEventListener('change', displayMatches);
     text.addEventListener('keyup', displayMatches);
+
 
 app();
