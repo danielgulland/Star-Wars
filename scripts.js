@@ -3,6 +3,7 @@ const form = document.querySelector(".search-form");
 const text = document.querySelector(".form-control");
 const navLinks = document.querySelector(".nav-links");
 const suggestions = document.querySelector(".suggestions");
+
 const characters = [];
 let films = [];
 let allData = [];
