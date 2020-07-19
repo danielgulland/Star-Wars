@@ -1,7 +1,11 @@
 const nav = document.querySelector('nav')
 const form = document.querySelector('.search-form');
 const text = document.querySelector('.form-control');
+<<<<<<< HEAD
 const navLinks = document.querySelector('.nav-links');
+=======
+const suggestions = document.querySelector('.suggestions');
+>>>>>>> ecc5400... first attempt at name filtering
 const characters = [];
 let films = [];
 let allData = [];
@@ -36,6 +40,7 @@ async function foo() {
     console.log(characters);
 }
 
+<<<<<<< HEAD
 async function getAllFilms() {
     try {
         const response = await fetch('https://swapi.dev/api/films/')
@@ -47,6 +52,23 @@ async function getAllFilms() {
         console.log(err);
     }
 }
+=======
+const result = form.addEventListener('submit', foo(5));
+
+// Less efficient way..because we're hard coding the number of pages
+
+// function getAllRequests(url) {
+//     for(let i = 1; i < 10; i++) {
+//         requests.push(fetch('https://swapi.dev/api/people/?page=' + i));
+//     }
+//     return requests;   
+// }
+
+// async function foo(index) {
+//     const responses = await Promise.all(getAllRequests());
+//     const data = await Promise.all(responses.map(res => res.json()));
+//     data.forEach(object => characters.push(...object.results));
+>>>>>>> ecc5400... first attempt at name filtering
 
  const result = form.addEventListener('submit', foo());
  const links = navLinks.addEventListener('click', getAllFilms);
@@ -72,8 +94,35 @@ async function getAllFilms() {
 
 }
 
+function findMatches(value) {
+    console.log(value);
+    return characters.filter(character => {
+        const regex = new RegExp(value, 'gi');
+        return character.name.match(regex);
+    })
+}
+
+function displayMatches() {
+    const matches = findMatches(this.value);
+    const html = matches.map(match => {
+        console.log(match.name);
+        return `
+        <li>
+        <span class="name">${match.name}</span>
+      </li>`
+    })
+    .join('');
+    console.log(html);
+    suggestions.innerHTML = html;
+}
+
 const app = ()=> {
     navSlide();
 }
+
+suggestions.html = '<h1>hey</h1>'
+
+    text.addEventListener('change', displayMatches);
+    text.addEventListener('keyup', displayMatches);
 
 app();
